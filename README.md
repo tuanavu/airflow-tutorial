@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Clone this repo
 - Install the prerequisites
 - Run the service
-- Check http://localhost:5000
+- Check http://localhost:8080
 - Done! :tada:
 
 ### Prerequisites
