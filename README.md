@@ -55,4 +55,5 @@ Go to Admin -> Connections and Edit "postgres_default" set this values:
 
 ## Credits
 
+- [Apache Airflow](https://github.com/apache/incubator-airflow)
 - [docker-airflow](https://github.com/puckel/docker-airflow/tree/1.10.0-5)
