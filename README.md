@@ -1,6 +1,8 @@
 Airflow tutorial
 ---
 
+This is the code for [Airflow-tutorial playlist](https://www.youtube.com/playlist?list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2) by Tuan Vu on Youtube
+
 Airflow tutorial
 
 ## Getting Started
