@@ -61,7 +61,7 @@ def transfertodb():
 # --------------------------------------------------------------------------------
 
 default_args = {
-    'owner': 'Ekhtiar',
+    'owner': 'airflow',
     'depends_on_past': False,
     'start_date': airflow.utils.dates.days_ago(2),
     'email': ['airflow@example.com'],
