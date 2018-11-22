@@ -3,8 +3,6 @@ Airflow tutorial
 
 This is the code for [Airflow-tutorial](https://www.youtube.com/playlist?list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2) playlist by Tuan Vu on Youtube
 
-Airflow tutorial
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
