@@ -10,9 +10,9 @@ services:
       - "5432:5432"
 
   webserver:
-    image: puckel/docker-airflow:1.10.0-5
+    image: puckel/docker-airflow:1.10.1
     build:
-      context: https://github.com/puckel/docker-airflow.git#1.10.0-5
+      context: https://github.com/puckel/docker-airflow.git#1.10.1
       dockerfile: Dockerfile
       args:
         AIRFLOW_DEPS: gcp_api,s3        
