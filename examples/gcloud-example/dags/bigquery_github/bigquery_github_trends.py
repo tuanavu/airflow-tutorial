@@ -72,7 +72,7 @@ t2 = BigQueryCheckOperator(
         dag=dag
     )
 
-## Task 3: aggregate github events to a daily partition table
+## Task 3: create a github daily metrics partition table
 t3 = BigQueryOperator(
         task_id='bq_write_to_github_daily_metrics',    
         sql='''
@@ -106,7 +106,7 @@ t3 = BigQueryOperator(
         dag=dag
     )
 
-## Task 4: aggregate github events to daily partition table
+## Task 4: aggregate past github events to daily partition table
 t4 = BigQueryOperator(
         task_id='bq_write_to_github_agg',    
         sql='''
@@ -147,7 +147,6 @@ t4 = BigQueryOperator(
     )
 
 # Task 5: aggregate hacker news data to a daily partition table
-
 t5 = BigQueryOperator(
     task_id='bq_write_to_hackernews_agg',    
     sql='''
@@ -182,9 +181,7 @@ t5 = BigQueryOperator(
     dag=dag
     )
 
-# Task 6
-# airflow test bigquery_github_trends_v1 bq_write_to_hackernews_github_agg 2017-06-02
-
+# Task 6: join the aggregate tables
 t6 = BigQueryOperator(
     task_id='bq_write_to_hackernews_github_agg',    
     sql='''
