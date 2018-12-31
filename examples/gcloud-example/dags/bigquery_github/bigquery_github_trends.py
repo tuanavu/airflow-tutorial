@@ -112,30 +112,35 @@ t4 = BigQueryOperator(
         sql='''
         #standardSQL
         SELECT
-          "{{ yesterday_ds_nodash }}" as date,
+          "{2}" as date,
           repo,
           SUM(stars) as stars_last_28_days,
-          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{{ macros.ds_add(ds, -6) }}") 
-            AND TIMESTAMP("{{ yesterday_ds }}") , 
+          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{4}") 
+            AND TIMESTAMP("{3}") , 
             stars, null)) as stars_last_7_days,
-          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{{ yesterday_ds }}") 
-            AND TIMESTAMP("{{ yesterday_ds }}") , 
+          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{3}") 
+            AND TIMESTAMP("{3}") , 
             stars, null)) as stars_last_1_day,
           SUM(forks) as forks_last_28_days,
-          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{{ macros.ds_add(ds, -6) }}") 
-            AND TIMESTAMP("{{ yesterday_ds }}") , 
+          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{4}") 
+            AND TIMESTAMP("{3}") , 
             forks, null)) as forks_last_7_days,
-          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{{ yesterday_ds }}") 
-            AND TIMESTAMP("{{ yesterday_ds }}") , 
+          SUM(IF(_PARTITIONTIME BETWEEN TIMESTAMP("{3}") 
+            AND TIMESTAMP("{3}") , 
             forks, null)) as forks_last_1_day
         FROM
-          `viant-data-science.github_trends.github_daily_metrics`
-        WHERE _PARTITIONTIME BETWEEN TIMESTAMP("{{ macros.ds_add(ds, -27) }}") 
-        AND TIMESTAMP("{{ yesterday_ds }}") 
+          `{0}.{1}.github_daily_metrics`
+        WHERE _PARTITIONTIME BETWEEN TIMESTAMP("{5}") 
+        AND TIMESTAMP("{3}") 
         GROUP BY
           date,
           repo
-        ''',
+        '''.format(BQ_PROJECT, BQ_DATASET,
+            "{{ yesterday_ds_nodash }}", "{{ yesterday_ds }}",
+            "{{ macros.ds_add(ds, -6) }}",
+            "{{ macros.ds_add(ds, -27) }}"
+            )
+        ,
         destination_dataset_table='{0}.{1}.github_agg${2}'.format(
             BQ_PROJECT, BQ_DATASET, '{{ yesterday_ds_nodash }}'
         ),
