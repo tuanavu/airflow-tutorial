@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jupyter-notebook:
+    build: .
+    image: my-jupyter-notebook    
+    volumes:
+      - ./gcloud-example:/home/jovyan/work      
+    ports:
+      - "8889:8888"
