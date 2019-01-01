@@ -13,7 +13,7 @@ a quick rundown of what you need:
 * Setup a Google Cloud Connection in Airflow
 * Enter the config variables
 
-### Runing Airflow
+### Running Airflow
 
 - Check out the master branch of this tutorial
 - Start the Airflow environment with docker
