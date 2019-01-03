@@ -74,5 +74,5 @@ docker-compose -f docker-compose-gcloud.yml run --rm webserver airflow test [DAG
 docker-compose -f docker-compose-gcloud.yml run --rm webserver airflow test bigquery_github_trends bq_check_githubarchive_day 2018-12-01
 
 # Task 2
-docker-compose -f docker-compose-gcloud.yml run --rm webserver airflow test bigquery_github_trends bq_check_githubarchive_day 2018-12-01
+docker-compose -f docker-compose-gcloud.yml run --rm webserver airflow test bigquery_github_trends bq_check_hackernews_full 2018-12-01
 ```
