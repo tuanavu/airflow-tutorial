@@ -50,10 +50,13 @@ Check http://localhost:8080/
 
 ## Other commands
 
-If you want to run other airflow sub-commands, you can do so like this:
+If you want to run airflow sub-commands, you can do so like this:
 
 - `docker-compose run --rm webserver airflow list_dags` - List dags
 - `docker-compose run --rm webserver airflow test [DAG_ID] [TASK_ID] [EXECUTION_DATE]` - Test specific task
+
+If you want to run/test python script, you can do so like this:
+- `docker-compose run --rm webserver python /usr/local/airflow/dags/[PYTHON-FILE].py` - Test python script
 
 ## Connect to database
 
