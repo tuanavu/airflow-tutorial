@@ -1,7 +1,19 @@
 Airflow tutorial
 ---
 
-This is the code for [Airflow-tutorial](https://www.youtube.com/playlist?list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2) playlist by Tuan Vu on Youtube
+This is the code for [Apache Airflow Tutorials](https://www.youtube.com/playlist?list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2) playlist by Tuan Vu on Youtube
+
+## Contents
+
+| Part |      Title                | Git Tag |
+|------|---------------------------|---------|
+| 1    | [Airflow tutorial 1: Introduction to Apache Airflow](https://youtu.be/AHMm1wfGuHE) ([blog post](https://www.applydatascience.com/airflow/airflow-tutorial-introduction/)) | [v0.1](https://github.com/tuanavu/airflow-tutorial/tree/v0.1) |
+| 2    | [Airflow tutorial 2: Set up airflow environment with docker](https://youtu.be/vvr_WNzEXBE) ([blog post](https://www.applydatascience.com/airflow/set-up-airflow-env-with-docker/)) | [v0.2](https://github.com/tuanavu/airflow-tutorial/tree/v0.2) |
+| 3    | [Airflow tutorial 3: Set up airflow environment using Google Cloud Composer](https://youtu.be/ld6JO3MiuPQ) ([blog post](https://www.applydatascience.com/airflow/set-up-airflow-with-google-composer/)) | N/A |
+| 4    | [Airflow tutorial 4: Writing your first pipeline](https://youtu.be/43wHwwZhJMo) ([blog post](https://www.applydatascience.com/airflow/writing-your-first-pipeline/)) | N/A |
+| 5    | [Airflow tutorial 5: Airflow concept](https://youtu.be/4rQSa2zEWfw) ([blog post](https://www.applydatascience.com/airflow/airflow-concept/)) | N/A |
+| 6    | [Airflow tutorial 6: Build a data pipeline using Google Cloud Bigquery](https://youtu.be/wAyu5BN3VpY) ([blog post](https://www.applydatascience.com/airflow/bigquery-pipeline-airflow/)) | [v0.6](https://github.com/tuanavu/airflow-tutorial/tree/v0.6) |
+
 
 ## Getting Started
 
