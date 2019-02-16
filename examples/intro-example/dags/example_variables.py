@@ -52,7 +52,7 @@ t1 = BashOperator(
     dag=dag,
 )
 
-# You can use a variable from a jinja template
+# You can directly use a variable from a jinja template
 ## {{ var.value.<variable_name> }}
 
 t2 = BashOperator(
