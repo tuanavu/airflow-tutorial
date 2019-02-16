@@ -105,6 +105,3 @@ venv.bak/
 
 # Mac
 .DS_Store
-
-# Except this file
-!.gitignore
