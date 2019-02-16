@@ -1,0 +1,7 @@
+{
+	"bigquery_github_trends_variables": {
+		"bq_conn_id": "my_gcp_conn",
+		"bq_project": "my_bq_project",
+		"bq_dataset": "my_bq_dataset"
+	}
+}
