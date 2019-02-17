@@ -2,8 +2,16 @@ import json
 from datetime import timedelta, datetime
 
 from airflow import DAG
+from airflow.models import Variable
 from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.contrib.operators.bigquery_check_operator import BigQueryCheckOperator
+
+
+# Config variables
+dag_config = Variable.get("bigquery_github_trends_variables", deserialize_json=True)
+BQ_CONN_ID = dag_config["bq_conn_id"]
+BQ_PROJECT = dag_config["bq_project"]
+BQ_DATASET = dag_config["bq_dataset"]
 
 default_args = {
     'owner': 'airflow',
@@ -27,11 +35,6 @@ dag = DAG(
     default_args=default_args, 
     schedule_interval=schedule_interval
     )
-
-# Config variables
-BQ_CONN_ID = "my_gcp_conn"
-BQ_PROJECT = "my-bq-project"
-BQ_DATASET = "my-bq-dataset"
 
 ## Task 1: check that the github archive data has a dated table created for that date
 # To test this task, run this command:
