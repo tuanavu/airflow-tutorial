@@ -15,7 +15,8 @@ services:
       context: https://github.com/puckel/docker-airflow.git#1.10.1
       dockerfile: Dockerfile
       args:
-        AIRFLOW_DEPS: gcp_api,s3        
+        AIRFLOW_DEPS: gcp_api,s3
+        PYTHON_DEPS: sqlalchemy==1.2.0        
     restart: always
     depends_on:
       - postgres
