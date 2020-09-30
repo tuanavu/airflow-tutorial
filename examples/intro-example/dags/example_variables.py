@@ -63,5 +63,5 @@ t3 = BashOperator(
     bash_command='echo {{ var.json.example_variables_config.var3 }} ',
     dag=dag,
 )
-
+## Creating task dependancy
 start >> [t1, t2, t3]
