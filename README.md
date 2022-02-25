@@ -13,6 +13,7 @@ This is the code for [Apache Airflow Tutorials](https://www.youtube.com/playlist
 | 4    | [Writing your first pipeline](https://youtu.be/43wHwwZhJMo) ([blog post](https://www.applydatascience.com/airflow/writing-your-first-pipeline/)) | N/A |
 | 5    | [Airflow concept](https://youtu.be/4rQSa2zEWfw) ([blog post](https://www.applydatascience.com/airflow/airflow-concept/)) | N/A |
 | 6    | [Build a data pipeline using Google Cloud Bigquery](https://youtu.be/wAyu5BN3VpY) ([blog post](https://www.applydatascience.com/airflow/bigquery-pipeline-airflow/)) | [v0.6](https://github.com/tuanavu/airflow-tutorial/tree/v0.6) |
+| 7    | [Airflow variables](https://youtu.be/bHQ7nzn0j6k) ([blog post](https://www.applydatascience.com/airflow/airflow-variables/)) | [v0.7](https://github.com/tuanavu/airflow-tutorial/tree/v0.7) |
 
 
 ## Getting Started
